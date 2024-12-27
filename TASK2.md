@@ -1,5 +1,8 @@
 # DEBUGGING USING SPIKE COMMAND
 ## We will use the same c file from 1st task and use the command 
+
+        riscv64-unknown-elf-gcc -Ofast -mabi=lp64 -march=rv64i -o akhil.o akhil.c
+        
 ![Screenshot 2024-12-26 203431](https://github.com/user-attachments/assets/539129d3-c259-4fbe-b29b-5a179e2244b4)
  ## As we can see the  **main** starts from hexadecimal 100b0 in assembly language with a lot of commands after it.
  To start debugging we run the command 
@@ -47,6 +50,10 @@ then one can notice that the value got reduced by 10 hexadecimal or by 16 in dec
 #### NOTE :  addi stands for add immediate it’s an instruction in the RISC-V assembly language that adds a constant number to a register.
 
 ![Screenshot 2024-12-26 204353](https://github.com/user-attachments/assets/2402ca75-74f8-4ee7-8a8b-4fd7ba307d56)
+
+## Next we will do the same steps but using the command 
+
+     
 
 THAT WAS ALL FOR THE TASK2 😊
 
