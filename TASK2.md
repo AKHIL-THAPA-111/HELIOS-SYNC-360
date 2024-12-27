@@ -1,5 +1,5 @@
 # DEBUGGING USING SPIKE COMMAND
-## We will use the same c file from 1st task
+## We will use the same c file from 1st task and use the command 
 ![Screenshot 2024-12-26 203431](https://github.com/user-attachments/assets/539129d3-c259-4fbe-b29b-5a179e2244b4)
  ## As we can see the  **main** starts from hexadecimal 100b0 in assembly language with a lot of commands after it.
  To start debugging we run the command 
