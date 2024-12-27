@@ -80,7 +80,10 @@ then one can notice that the value got reduced by 10 hexadecimal or by 16 in dec
 
        ./a.out
 
-![Screenshot 2024-12-27 151342](https://github.com/user-attachments/assets/f241810e-8ef5-4a7d-8fe1-e5b1452ee26e)
+       
+![Screenshot 2024-12-27 150804](https://github.com/user-attachments/assets/1578b8a9-e942-431b-b5a3-59261af31f06)
+
+
 
 ### Next we will make an riscv file of the same code using the command 
 
