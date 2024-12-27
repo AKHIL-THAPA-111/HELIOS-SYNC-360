@@ -51,10 +51,6 @@ then one can notice that the value got reduced by 10 hexadecimal or by 16 in dec
 
 ![Screenshot 2024-12-26 204353](https://github.com/user-attachments/assets/2402ca75-74f8-4ee7-8a8b-4fd7ba307d56)
 
-## Next we will do the same steps but using the command 
-
-                riscv64-unknown-elf-gcc -O1 -mabi=lp64 -march=rv64i -o akhil.o akhil.c
-
 
 
      
