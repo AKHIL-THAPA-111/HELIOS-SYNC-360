@@ -84,6 +84,16 @@ then one can notice that the value got reduced by 10 hexadecimal or by 16 in dec
 
 ### Next we will make an riscv file of the same code using the command 
 
+        riscv64-unknown-elf-gcc -Ofast -mabi=lp64 -march=rv64i -o fact.o fact.c
+and use the command 
+
+### After that we will compile the code using spike command as below
+
+        spike -d pk fact.o
+
+
+
+
       
 
 
