@@ -52,6 +52,41 @@ then one can notice that the value got reduced by 10 hexadecimal or by 16 in dec
 ![Screenshot 2024-12-26 204353](https://github.com/user-attachments/assets/2402ca75-74f8-4ee7-8a8b-4fd7ba307d56)
 
 
+## Next we will make a c code which will do the fatorial of number 5
+### The code is : 
+
+        #include <stdio.h>
+
+        int main() {
+            int x = 5;  // Number to compute the factorial
+            int i;
+            int factorial = 1;  // Initialize factorial to 1
+
+        for(i = 1; i <= x; i++) {
+        factorial *= i;  // Multiply factorial by i in each iteration
+    }
+
+        printf("Factorial of %d is %d\n", x, factorial);
+        return 0;
+     }
+
+### We will run the debug the code using gcc and spike both (*The name of file is fact.c*)
+
+#### First we will perform gcc using the command
+
+       gcc fact.c
+
+#### Then use the following command to get output
+
+       ./a.out
+
+![Screenshot 2024-12-27 151342](https://github.com/user-attachments/assets/f241810e-8ef5-4a7d-8fe1-e5b1452ee26e)
+
+### Next we will make an riscv file of the same code using the command 
+
+      
+
+
 
      
 
