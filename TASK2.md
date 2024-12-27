@@ -87,18 +87,25 @@ then one can notice that the value got reduced by 10 hexadecimal or by 16 in dec
         riscv64-unknown-elf-gcc -Ofast -mabi=lp64 -march=rv64i -o fact.o fact.c
 and use the command 
 
+           riscv64-unknown-elf-objdump -d fact.o
+to view the file and its address
+
+![Screenshot 2024-12-27 151218](https://github.com/user-attachments/assets/d365a9c0-4c0f-4602-b7c1-95b4233f3525)
+
+
 ### After that we will compile the code using spike command as below
 
         spike -d pk fact.o
 
+### Since the main starts from the hexadecimal 10184 we use the command 
 
+        until pc 0 10184
 
+and compile it , and it should give us the output ater it 
 
-      
+![Screenshot 2024-12-27 151342](https://github.com/user-attachments/assets/ffc0e6ca-4c0f-4e14-b323-d4e521bd866e)
 
-
-
-     
+Thus , we have successfully compiled our code using gcc and spike simmulation
 
 THAT WAS ALL FOR THE TASK2 😊
 
