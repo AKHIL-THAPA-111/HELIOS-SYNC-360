@@ -16,8 +16,6 @@ There are a further two variants of the instruction formats   based on the handl
 
 
 ![image](https://github.com/user-attachments/assets/fda21dc2-3feb-49a3-9fd8-9af8128fd977)
-
-
 ![image](https://github.com/user-attachments/assets/b624e997-6112-40cd-9702-5d9823d0a4b7)
 
 ____________________________________________________________________________________________________________________________
@@ -68,9 +66,71 @@ the S-Type instruction format in the RISC-V architecture is specifically designe
 
 opcode(6-0) identifies the operation to be performed (SW - for store word) ,
 
-imm[4:0](11-7) these 5 bits of the immediate value specifies an offset to be added to the address in rs1 ,
+imm[4:0] (11-7) these 5 bits of the immediate value specifies an offset *(an offset is an adjustment made to an address)* to be added to the address in rs1 ,
 
 funct3(14-12) specifies the type of storage operation ,
 
-rs1 
+rs1(19-15) first source register that contains the base address where data will be stored ,
+
+rs2(24-20) 2nd source register that contains the data to be stored in memory ,
+
+imm[11:5] (31:25) 7 bits of upper immediate value which complete 12 bit immediate value used as an offset ,
+
+
+### **U-Type** :
+
+![image](https://github.com/user-attachments/assets/063ad859-81ec-4f4a-a303-f0f555936882)
+
+the U-Type instruction format in the RISC-V architecture is designed for operations that involve a 20-bit immediate value, primarily used for loading upper immediate values into registers. 
+
+opcode(6-0) identifies the operation to be performed (LUI - for loading an upper immediate value) ,
+
+rd(11-7) destination register where the result of the operation will be stored ,
+
+imm[31:12] (31:12) 20 bit immediate value which is loaded into the upper part of the destination structure
+
+
+### **B-Type** :
+
+![image](https://github.com/user-attachments/assets/2ca54226-95ae-4225-aed6-a7bbc2363a82)
+
+the B-Type instruction format in the RISC-V architecture is primarily used for branch instructions, which control the flow of a program based on certain conditions.
+
+opcode(6-0) identifies the operation to be performed (BEQ - equals to , BNE - not equal to) ,
+
+funct3(14-12) specifies the type of branch operation ,
+
+rs1(19-15) is a first source register that contains one of the oprands for the comparision ,
+
+rs2(24-20) the 2nd register that contains the operand for the comparision ,
+
+imm[4:1] (11:7) the lower bits of the immediate value used as part of the offset ,
+
+imm[10:5] (30:25) the middle bits of the immediate value which are also part of the offset for branching ,
+
+imm(1 bit) sign bit of the immediate value, which is used to complete the 13-bit immediate offset for branching .
+
+
+### **J-Type** :
+
+![image](https://github.com/user-attachments/assets/143c16f6-d955-4954-b870-ba0ef1616d87)
+
+the J-Type instruction format in the RISC-V architecture is specifically used for jump instructions, which allow for unconditionally transferring control to a new instruction address.
+
+opcode(6-0) identifies the operation to be performed (JAL - jump and link) ,
+
+rd(11-7) destination register where the return address will be stored ,
+
+imm[19:12] (31:12) middle bits of the immediate value which are part of the target address to jump to ,
+
+imm(1 bit) sign bit of the immediate value,which helps in determining the direction of the jump ,
+
+imm[10:1] (30:21) lower bits of the immediate value which are also part of the target address for jumping ,
+
+imm(1 bit) this bit is included to help with sign extension when calculating the jump address .
+_________________________________________________________________________________________________________________________
+
+
+
+
 
