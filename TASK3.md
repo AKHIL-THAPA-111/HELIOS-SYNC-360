@@ -14,6 +14,10 @@ formats to simplify decoding.
 
 ###  Immediate Encoding Variants 
 There are a further two variants of the instruction formats   based on the handling of immediates namely B-Type and J-Type
+
+
 ![image](https://github.com/user-attachments/assets/fda21dc2-3feb-49a3-9fd8-9af8128fd977)
+
+
 ![image](https://github.com/user-attachments/assets/b624e997-6112-40cd-9702-5d9823d0a4b7)
 
