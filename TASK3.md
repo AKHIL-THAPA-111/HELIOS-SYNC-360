@@ -152,9 +152,9 @@ Now we take the obj-dump of this code which is :
 
 ![Screenshot 2024-12-27 141314](https://github.com/user-attachments/assets/0cb613ca-5116-44bd-ae6a-181309f1ebc1)
 
-We will start from top to bottom,
+We will start to nalayze unique instructions ,
 
-the first instruction
+### 1)The first instruction
 
            10184: ff010113 addi sp, sp, -16
 
@@ -172,16 +172,71 @@ Thus we can conclude this is an I-Type instruction
 
 These are  assembly language neumonics where the hexamdecimal instruction is given by **ff010113** which when conveted to binary is as follows :
 
-Hex: `f f 0 1 0 1 1 3`  
+Hex: `f f 0 1 0 1 1 3`
+
 Binary: `1111 1111 0000 0001 0000 0001 0001 0011`
 
+Code : `-16=111111110000, rs1=00010 ,funct3=000 ,rd=00010 ,opcode=0010011`
 
-now we move on to next instruction 
+
+### 2)Now we move on to next instruction 
 
        10188: 00113423     sd     ra,8(sp) 
 
+here the address is 10188 , 
 
+**sd** is the store double which as the name suggests stores a double,
+
+**ra** is the source register which contains the value to be stored ,
+  
+**8(sp)** indicates the offset of 8 to be  added to the surrent value in stack pointer register
+
+Thus, we can conlude it is an s type of instruction 
+
+These are  assembly language neumonics where the hexamdecimal instruction is given by **00113423** which when conveted to binary is as follows :
+
+Hex: `0 0 1 1 3 4 2 3`  
+Binary: `0000 0000 0001 0001 0011 0100 0010 0011`
+Code: `immediate = 0000 0000 0001 , rs1=00010 , funct3 =011, rd= 01000 ,Opcode = 0100011` 
        
 
+### 3) The next instruction is 
+
+            1018c: 03c00793 li a5,60
+here the address is 1018c ,
+
+**li** is a pseudo-instruction *(A pseudo-instruction is an assembly language command that does not correspond directly to a machine instruction. Instead, it simplifies programming by translating into one or more actual machine instructions during assembly.)* to load a constant value directly into a register
+
+**a5** is a destination register where the immediate value is loaded
+
+**60** is the immediate value
+
+Thus we can conclude it is I-Type as the instruction involve one register as destination and one immediate value
+
+These are  assembly language neumonics where the hexamdecimal instruction is given by **03c00793** which when conveted to binary is as follows :
+
+Hex: `0 3 c 0 0 7 9 3`  
+Binary: `0000 0011 1100 0000 0000 0111 1001 0011`
+Code : `immediate = 0000 0011 1100 ,rs1 = 00000,funct3 = 000,rd = 01111,Opcode = 0010011` 
+
+### 4) The next instruction is 
+
+            10190: fff7879b addiw a5,a5,-1  
+
+here the address is 10190 ,
+
+**addiw** indicates add immediate word,which adds a sign-extended 12-bit immediate to a 32-bit register
+
+**a5** is both the source and destination register
+
+**-1** is the immediate value to be added to the contents of register of  a5
+
+Thus, it is a I-type instruction
+
+These are  assembly language neumonics where the hexamdecimal instruction is given by **03c00793** which when conveted to binary is as follows :
+
+Hex: `fff7879b`  
+Binary: `1111 1111 1111 0111 1000 0111 1001 1011`
+Code : `immediate = 1111 1111 1111 , rs1 = 01111 , funct3 = 000 , rd = 01111 , Opcode = 0011011` 
 
 
