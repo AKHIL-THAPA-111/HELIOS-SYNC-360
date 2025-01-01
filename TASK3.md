@@ -153,7 +153,8 @@ Now we take the obj-dump of this code which is :
 ![Screenshot 2024-12-27 141314](https://github.com/user-attachments/assets/0cb613ca-5116-44bd-ae6a-181309f1ebc1)
 
 We will start from top to bottom,
-the instruction
+
+the first instruction
 
            10184: ff010113 addi sp, sp, -16
 
