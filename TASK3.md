@@ -152,9 +152,35 @@ Now we take the obj-dump of this code which is :
 
 ![Screenshot 2024-12-27 141314](https://github.com/user-attachments/assets/0cb613ca-5116-44bd-ae6a-181309f1ebc1)
 
+We will start from top to bottom,
+the instruction
+
+           10184: ff010113 addi sp, sp, -16
+
+the number 10184 represents the address 
 
 
+the opperation **addi** adds an immediate value to a register ,
 
+**sp** is the stack pointer register (stack pointer is a special-purpose register that holds the memory address of the top of the stack)
+
+and -16 indicates the immidiate value to add to the current value 
+
+Thus we can conclude this is an I-Type instruction
+
+
+These are  assembly language neumonics where the hexamdecimal instruction is given by **ff010113** which when conveted to binary is as follows :
+
+Hex: `f f 0 1 0 1 1 3`  
+Binary: `1111 1111 0000 0001 0000 0001 0001 0011`
+
+
+now we move on to next instruction 
+
+       10188: 00113423     sd     ra,8(sp) 
+
+
+       
 
 
 
