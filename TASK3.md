@@ -129,6 +129,30 @@ imm[10:1] (30:21) lower bits of the immediate value which are also part of the t
 
 imm(1 bit) this bit is included to help with sign extension when calculating the jump address .
 _________________________________________________________________________________________________________________________
+# Identifying atleast 15 of these instructions in a typical code
+
+The C code is : 
+
+          #include <stdio.h>
+
+          int main() {
+              int x = 5; // Number to compute the factorial
+              int i;
+              int factorial = 1; // Initialize factorial to 1
+          
+              for(i = 1; i <= x; i++) {
+                  factorial *= i; // Multiply factorial by i in each iteration
+              }
+          
+              printf("Factorial of %d is %d\n", x, factorial);
+              return 0;
+          }
+
+Now we take the obj-dump of this code which is : 
+
+![Screenshot 2024-12-27 141314](https://github.com/user-attachments/assets/0cb613ca-5116-44bd-ae6a-181309f1ebc1)
+
+
 
 
 
