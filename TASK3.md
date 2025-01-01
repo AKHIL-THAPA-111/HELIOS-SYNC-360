@@ -195,9 +195,11 @@ Thus, we can conlude it is an s type of instruction
 
 These are  assembly language neumonics where the hexamdecimal instruction is given by **00113423** which when conveted to binary is as follows :
 
-Hex: `0 0 1 1 3 4 2 3`  
+Hex: `0 0 1 1 3 4 2 3`
+
 Binary: `0000 0000 0001 0001 0011 0100 0010 0011`
-Code: `immediate = 0000 0000 0001 , rs1=00010 , funct3 =011, rd= 01000 ,Opcode = 0100011` 
+
+Code: `immediate = 0000000 ,rs2=00001 , rs1=00010 , funct3 =011, imm= 01000 ,Opcode = 0100011` 
        
 
 ### 3) The next instruction is 
@@ -215,8 +217,10 @@ Thus we can conclude it is I-Type as the instruction involve one register as des
 
 These are  assembly language neumonics where the hexamdecimal instruction is given by **03c00793** which when conveted to binary is as follows :
 
-Hex: `0 3 c 0 0 7 9 3`  
+Hex: `0 3 c 0 0 7 9 3`
+
 Binary: `0000 0011 1100 0000 0000 0111 1001 0011`
+
 Code : `immediate = 0000 0011 1100 ,rs1 = 00000,funct3 = 000,rd = 01111,Opcode = 0010011` 
 
 ### 4) The next instruction is 
@@ -235,8 +239,83 @@ Thus, it is a I-type instruction
 
 These are  assembly language neumonics where the hexamdecimal instruction is given by **03c00793** which when conveted to binary is as follows :
 
-Hex: `fff7879b`  
+Hex: `f f f 7 8 7 9 b`  
+
 Binary: `1111 1111 1111 0111 1000 0111 1001 1011`
+
 Code : `immediate = 1111 1111 1111 , rs1 = 01111 , funct3 = 000 , rd = 01111 , Opcode = 0011011` 
+
+
+### 5) The next instruction is 
+
+             10194: fe079ee3 bnez a5,10190 <main+0xc>
+
+here the address is 10194 ,
+
+**bnez** stands for branch not equal to zero which checks if the value in register a5 is non zero
+
+if not equal to 0 it branches out to the address 10190 
+
+**<main+0xc>** specifies an address that is 12 bytes beyond the start of the main function.
+
+Thus , it is a B-type
+
+Hex: `f e 0 7 9 e e 3`  
+
+Binary: `1111 1110 0000 0111 1001 1110 1110 0011`
+
+Code : `immmediate = 1 111111, rs2=00000 , rs1 = 01111 , funct3 = 001 ,imm = 1110 1  ,opcode = 1100011` 
+
+### 6) The next unique instruction is 
+
+             101a0: 00021537 lui a0,0x21
+
+**lui** is used to load 20 bit immediate value into the upper 20 bits of a0 register 
+
+**0x21** is the value which will be loaded 
+
+Thus, its an U-type  instruction 
+
+Hex: `0 0 0 2 1 5 3 7`  
+
+Binary: `0000 0000 0000 0010 0001 0101 0011 0111`
+
+Code : `imm = 0000 0000 0000 0010 0001 , rd = 01010  ,Opcode = 0110111 ` 
+
+### 7) The next unique instruction is 
+
+       101a8: 26c000ef jal ra,10414 <printf>
+
+here the address is 101a8 ,
+
+**jal** is "jump and link" , a instruction to jump to a specific address and simultaneously store the return address 
+
+**ra** is the return address and 10414 is the target address(corresponding to the function printf)
+
+Thus,it is a J-type instruction
+
+Hex: `2 6 c 0 0 0 e f`  
+
+Binary: `0010 0100 1100 0000 0000 0000 1110 1111`
+
+Code : `imm = 0 0100100110 , imm = 0 0000 0000 ,rd = 00001 , Opcode = 110 1111 ` 
+
+### 8) The next unique instruction is 
+
+       101b0: 00813083 ld ra,8(sp)
+
+here the address is 101b0 ,
+
+**ld** is used to load a 64-bit value from memory into a specific refister
+
+**ra** is the register where the value at address sp is at with offset of 8
+
+This is I-Type instruction
+
+Hex: `00813083`  
+
+Binary: `0000 0000 1000 0001 0011 0000 1000 0011 `
+
+Code : `imm = 0000 0000 1000, rs1 = 00010 , funct3 = 011 , rd = 00001 , Opcode = 0000011` 
 
 
