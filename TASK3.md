@@ -5,6 +5,7 @@ In the base RV32I ISA , there are four main instruction formats mainly the R-Typ
 All are 32 bits long.The base ISA has IALIGN=32, meaning that instructions must be aligned on a four-byte boundary in memory.
 If there is an misalignment an exception is taken such it branches or there will occur an unconditional jump , techincally *instruction-address-misaligned exception*.
 
+
 ![image](https://github.com/user-attachments/assets/ba58b088-d2c8-4fe9-bf97-87fd1d983aef)
 
 **As in the image there are source resistors termed as **rs** *(These are the registers that hold the input values for a particular operation or instruction)*.  and destination resisters **rd** *(This register holds the result of the operation performed by the instruction.)* . The **funct3** is a 3-bit field *(field refers to a specific segment or portion of an instruction that contains particular information necessary for the processor to execute that instruction)*  and **funct7** a 7-bit field  and opcode *(an instruction that specifies the operation to be done by the processor)* and imm[x:y] means that the immediate value *(a constant data value embedded directly within an instruction)* is derived from the bits in the instruction ranging from position y to position x.
