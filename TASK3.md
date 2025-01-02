@@ -352,5 +352,43 @@ Code : `immediate = 0000 0000 0000 , rs1 = 01010 , funct3 = 000 , rd = 01011 , O
 
 ### 11) The next unique code is 
 
-             101ac: 
+             101c0: 00000693 li a3,0
+here the address is 101c0 ,
+
+**li** is again load immediate which loads 0 to register a3 .
+
+This is an I - Type instruction.
+
+Hex: `0 0 0 0 0 6 9 3 `  
+
+Binary: `0000 0000 0000 0000 0000 0110 1001 0011 `
+
+Code : `immmediate = 0000 0000 0000 , rs1 =  00000 , funct3 = 000 , rd = 01101 , opcode = 0010011` 
+
+
+### 12) The unique instruction is 
+
+           101cc: 4390206f j 12e04 <__register_exitproc>
+
+The address 101cc .
+
+**j** (jump) instruction is sed to perform an unconditional jump to a specificed address.
+
+12e04 is the memory address where the function is .
+
+<__register_exitproc> is the name of the function being refferd to .
+
+
+This is an J-Type instruction .
+
+Hex: `4 3 9 0 2 0 6 f`  
+
+Binary: `0100 0011 1001 0000 0010 0000 0110 1111`
+
+Code : `immmediate = 0 1000011100 1 00000010 , rd = 00000 , opcode = 110 1111 ` 
+
+WE WILL NOW CHECK OTHER UNIQUE INSTRUCTIONS : 
+
+
+
 
