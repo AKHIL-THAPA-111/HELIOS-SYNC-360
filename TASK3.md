@@ -318,6 +318,26 @@ Binary: `0000 0000 1000 0001 0011 0000 1000 0011 `
 
 Code : `imm = 0000 0000 1000, rs1 = 00010 , funct3 = 011 , rd = 00001 , Opcode = 0000011` 
 
-### 9) 
+### 9) The next unique code is 
+
+          101b8: 00008067 ret 
+
+here the address is 101b8 ,
+
+**ret** is also an pseudo instruction , which is a short for jalr x0 , ra , 0 . This means that when the ret instruction is executed, it effectively jumps to the address stored in the return address register (ra, which is register x1) and sets the program counter (PC) to that address.
+
+This is a J-Type instruction as it contains an immediate , destination register and an opcode .
+
+Hex: `00008067`  
+
+Binary: `0000 0000 0000 0000 1000 0000 0110 0111  `
+
+Code : `immediate = 0 0000000000 0 00001000 , rd = 00000 , opcode =  1100111` 
+
+### 10) The next unique code is 
+
+              101bc: 00050593   mv  a1,a0
+
+here the address is 
 
 
