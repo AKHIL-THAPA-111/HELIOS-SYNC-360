@@ -338,6 +338,17 @@ Code : `immediate = 0 0000000000 0 00001000 , rd = 00000 , opcode =  1100111`
 
               101bc: 00050593   mv  a1,a0
 
-here the address is 
+here the address is 101bc ,
+
+The mv (move) instruction is a pseudo-instruction in RISC-V . 
+
+This is an I - Type .
+
+Hex: `0 0 0 5 0 5 9 3 `  
+
+Binary: `0000 0000 0000  0101 0000 0101 1001 0011 `
+
+Code : `immediate = 0000 0000 0000 , rs1 = 01010 , funct3 = 000 , rd = 01011 , Opcode = 0010011 ` 
+
 
 
