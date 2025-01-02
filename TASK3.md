@@ -350,5 +350,7 @@ Binary: `0000 0000 0000  0101 0000 0101 1001 0011 `
 
 Code : `immediate = 0000 0000 0000 , rs1 = 01010 , funct3 = 000 , rd = 01011 , Opcode = 0010011 ` 
 
+### 11) The next unique code is 
 
+             101ac: 
 
