@@ -389,6 +389,61 @@ Code : `immmediate = 0 1000011100 1 00000010 , rd = 00000 , opcode = 110 1111 `
 
 WE WILL NOW CHECK OTHER UNIQUE INSTRUCTIONS : 
 
+![Screenshot 2025-01-02 151224](https://github.com/user-attachments/assets/691bcef8-01d2-43a3-bbe7-359cd13ee172)
 
+### 13) The unique code in this is 
 
+          100e4: ffff0797  auipc a5,0xffff0
 
+The address is 100e4 
+**auipc** is used to generate a PC(program counter) - relative address by adding 20-bit immediate value to the upper 20 bits of program couter 
+
+**a5** is the register where the result is stored
+
+**0xffff0** is the immediate value
+
+This is an U-Type of instruction .
+
+Hex: `f f f f 0 7 9 7`  
+
+Binary: `1111 1111 1111 1111 0000 0111 1001 0111`
+
+Code : `imm = 1111 1111 1111 1111 0000 , rd = 01111 , Opcode = 0010111 ` 
+
+### 14) Another unique code is 
+
+                 100ec: 00078863  beqz a5,100fc <register_fini+0x18>
+
+the address here is 100ec ,
+
+**beqz** (branch if equal to zero) is a pseudoinstruction that checks if the value of the given register is 0 or not , in this case a5
+
+If 0 the PC is updated to the target address 100fc 
+
+Thus it is an B-Type instruction.
+
+Hex: `0 0 0 7 8 8 6 3`  
+
+Binary: `0000 0000 0000 0111 1000 1000 0110 0011`
+
+Code : `imm = 0 000000 , rs2 = 00000 , rs1 = 01111 , funct3 =  000 ,  imm =1000 0 ,Opcode = 1100011 ` 
+
+### 15) Another unique code is 
+
+              10114: 40a60633  sub a2,a2,a0
+
+the address here is 10114 , 
+
+**sub** is an instruction used to subtract the value of one register from another and store in a register , here a0 - a2 and the result is stored in a2 itself
+
+Thus its an R-Type instruction .
+
+Hex: ` 4 0 a 6 0 6 3 3 `  
+
+Binary: `0100 0000 1010 0110 0000 0110 0011 0011`
+
+Code : `funct7 = 0100000 , rs2 = 01010 , rs1 = 01100 , funct3 = 000 , rd =  01100 , Opcode =  011 0011 ` 
+
+THAT WAS ALL FOR THE TASK 3 😊
+
+                 
