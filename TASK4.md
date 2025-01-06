@@ -430,5 +430,42 @@ To see the waveform we will use the command
 
 ### Next we will try to analyize the simulated pipelines
 
+In the middle panel one can see :
 
+CLK (Clock Signal): This is the main clock signal for the entire system. It drives the timing and synchronization of all sequential logic.
+
+NPC[31:0] (Next Program Counter): The next program counter value that points to the address of the next instruction to be executed.
+
+RN (Register Number or Result Name): Likely represents a register number involved in the instruction, perhaps for identifying the destination register in the write-back stage.
+
+WB_OUT[31:0] (Writeback Output): The data being written back to the register file from the execution unit or memory. It carries the final result of an instruction.
+
+EX_MEM_ALUOUT[31:0] (ALU Output) : The result from the Arithmetic Logic Unit (ALU) during the execute stage, passed to the memory stage. 
+
+EX_MEM_IR[31:0] (Instruction Register): Holds the current instruction being processed in the EX/MEM pipeline stage.
+ 
+ID_EX_A[31:0] (Source Register A): One of the source operands fetched from the register file during the decode stage. 
+
+ID_EX_B[31:0] (Source Register B): The second source operand for operations that require two operands, such as addition or subtraction.
+
+ID_EX_IMMEDIATE[31:0] (Immediate Value)
+For instructions that use immediate values (e.g., load immediate), this signal carries the immediate data.
+
+ID_EX_IR[31:0] (Instruction Register): Holds the instruction in the decode/execution stage, similar to EX_MEM_IR, but earlier in the pipeline.
+
+ID_EX_RD (Destination Register): Indicates the register number where the result of the current instruction will be written back.
+
+IF_ID_IR[31:0] (Instruction Register): The instruction fetched from memory, waiting to be decoded.
+
+IF_ID_NPC[31:0] (Next Program Counter in): The program counter associated with the instruction currently being fetched. 
+
+MEM_WB_ALUOUT[31:0] (ALU Output): The ALU result passed to the write-back stage from the memory stage.
+
+MEM_WB_IR[31:0] (Instruction Register in): The instruction currently in the memory/write-back stage. 
+
+MEM_WB_LMD[31:0] (Load Memory Data): Carries data loaded from memory back to the processor, ready to be written into a register.
+
+Clock Signal (CLK): Synchronizes the operation of all signals.
+_________________________________________________________________________________________________________________________________________________________________________
+Thats all for task4 😊
                           
