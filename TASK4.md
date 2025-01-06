@@ -32,7 +32,7 @@ to install iverilog(verilog synthesis and simulation tool) and gtkwave (a wavefo
 
 ### NEXT we will make a verilog file (end with .v )
 
-IN my case the verilog code file name is aha.v , the verilog code is :
+IN my case the verilog code file name is ah.v , the verilog code is :
         
         module iiitb_rv32i(clk,RN,NPC,WB_OUT);
         input clk;
@@ -368,7 +368,7 @@ IN my case the verilog code file name is aha.v , the verilog code is :
         
     
 
-and the test bench code is named ass ah.v , which is :
+and the test bench code is named as aha.v , which is :
 
         module iiitb_rv32i_tb;
         
@@ -393,7 +393,42 @@ and the test bench code is named ass ah.v , which is :
         
         end
         endmodule
-        
+
+
+### Now we will try to simulate this
+
+For that we will use the command
+
+                iverilog -o sim.vvp ah.v aha.v 
+
+which is basically compiling the verilog files *ah.v* and *aha.v* and we are making an output file name sim.vvp , such that it could be executed with a verilog simulator
+
+![Screenshot 2025-01-05 203219](https://github.com/user-attachments/assets/f28ea15b-8f46-462c-bec2-b83c84693568)
+
+
+Then we will use the command
+
+        vpp sim.vpp
+
+which basically creates an dumpfile iiitb_rv32i.vcd opened for output
+
+![Screenshot 2025-01-05 203402](https://github.com/user-attachments/assets/ff6d7f0d-1ad6-48fa-849a-fd91e0042f30)
+
+
+### VIEWING WAVEFORM
+
+To see the waveform we will use the command 
+
+               gtkwave iiitb_rv32i.vcd 
                  
-                 
+ which will open gtkwave to display the simulation result
+ 
+(*Note : make sure u add the file necessery to check the waveform or you will get an empty waveform*)
+
+
+![Screenshot 2025-01-05 203947](https://github.com/user-attachments/assets/3757f6cc-b59f-4a3e-8fa2-090ced28e1dc)
+
+### Next we will try to analyize the simulated pipelines
+
+
                           
