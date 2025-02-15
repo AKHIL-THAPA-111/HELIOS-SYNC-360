@@ -1,4 +1,4 @@
-# PROJECT SMARTDOOR
+![413534824-79d7bfdf-f695-4f3a-8015-ca0068845237](https://github.com/user-attachments/assets/58f66da2-6ccb-42d5-9495-b5b57b589d95)# PROJECT SMARTDOOR
 
 
 ### OVERVIEW OF THE PROJECT
@@ -60,6 +60,10 @@ The board is powered by usb type
 ||PWM|PC0|
 
 ### DIAGRAM 
+
+![413534824-79d7bfdf-f695-4f3a-8015-ca0068845237](https://github.com/user-attachments/assets/b8c14cda-d033-4344-a62a-629bce622440)
+
+
 
 
 
