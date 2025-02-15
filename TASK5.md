@@ -53,13 +53,14 @@ The board is powered by usb type
 |-----------------------|-------------|--------|
 | ULTRASONIC SENSOR | GND|GND OF VSD|
 ||VCC|+5 OF VSD|
-||ECHO||
-||TRG||
+||ECHO|PD5|
+||TRG|PD2|
 | Servo motor |VCC|+5 OF VSD|
 ||GND|GND OF VSD|
-||PWM||
+||PWM|PC0|
 
 ### DIAGRAM 
+
 
 
 
