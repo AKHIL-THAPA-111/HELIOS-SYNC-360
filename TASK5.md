@@ -1,8 +1,6 @@
 # PROJECT SMARTDOOR
 
 
-###### ABSTRACT : This project mimics a samrt door using a servo motor controlled by the CH32V003F4U6 microcontroller with a 32-bit RISC-V core and ultrasonic sensor . The system adjusts the servo to mimic the opening and closing of a door if a person comes in range of door.
-***
 ### OVERVIEW OF THE PROJECT
 This project is used to give an idea to make a automatic door.
 
@@ -20,6 +18,7 @@ Adjustable Sensitivity & Delay – Users can fine-tune the detection distance an
 Compact & Low-Cost – Uses minimal hardware while delivering smart automation, making it ideal for DIY home automation projects.
 
 Expandable & Upgradable – Can integrate with RFID, facial recognition, or IoT for enhanced security and smart home connectivity.
+
 # Why This Matters 
 
 Scalable and Cost-Effective
