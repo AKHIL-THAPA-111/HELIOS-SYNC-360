@@ -59,4 +59,7 @@ The board is powered by usb type
 ||GND|GND OF VSD|
 ||PWM||
 
+### DIAGRAM 
+
+
 
