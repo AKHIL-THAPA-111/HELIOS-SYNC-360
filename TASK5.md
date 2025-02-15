@@ -46,11 +46,17 @@ This design minimizes manual intervention, reducing the need for frequent adjust
 ###### FLOW CHART :
 ![image](https://github.com/user-attachments/assets/d1ac258f-4abb-48cc-bf8a-a7a0a2e77f54)
 
-## Why This Matters  
+## PINLAYOUT
+The board is powered by usb type
 
 | COMPONENT               | LABLE  |   PINOUT |
-|-----------------------|-------------|
-| **Scalable and Cost-Effective** | Perfect for small to medium-sized solar installations, with the flexibility to expand as energy demands grow. |
-| **Low Maintenance**  | This design minimizes manual intervention, reducing the need for frequent adjustments and lowering long-term labor costs. |
+|-----------------------|-------------|--------|
+| ULTRASONIC SENSOR | GND|GND OF VSD|
+||VCC|+5 OF VSD|
+||ECHO||
+||TRG||
+| Servo motor |VCC|+5 OF VSD|
+||GND|GND OF VSD|
+||PWM||
 
 
